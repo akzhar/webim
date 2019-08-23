@@ -1,0 +1,65 @@
+// @font-face {
+//   font-weight: 600;
+//   font-family: "Roboto-Bold";
+//   font-style: normal;
+//   font-display: swap;
+//   src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+//   url("../fonts/Roboto-Bold.woff") format("woff");
+// }
+
+// @font-face {
+//   font-weight: 500;
+//   font-family: "Roboto-Medium";
+//   font-style: normal;
+//   font-display: swap;
+//   src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
+//   url("../fonts/Roboto-Medium.woff") format("woff");
+// }
+
+@font-face {
+  font-weight: 400;
+  font-family: "Ubuntu-Regular";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Ubuntu-Regular.woff2") format("woff2"),
+  url("../fonts/Ubuntu-Regular.woff") format("woff");
+}
+
+@import "variables/variables.scss";
+
+html, body {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: Ubuntu-Regular, Arial, sans-serif;
+  color: #000000;
+}
+
+.page-wrapper {
+  min-width: 320px;
+  margin: 0 auto;
+
+  outline: 1px solid green; //temp
+}
+
+@import "header/header.scss";
+@import "menu-button/menu-button.scss";
+@import "menu-list/menu-list.scss";
+@import "logo/logo.scss";
+
+// @media(min-width: $tablet-width) {
+//   .page-wrapper {
+//     width: 750px;
+//   }
+// }
+
+@media(min-width: $desktop-width) {
+  .page-wrapper {
+    width: 1540px;
+  }
+}

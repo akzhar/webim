@@ -1,0 +1,67 @@
+.menu-button {
+  position: relative;
+
+  width: 57px;
+  height: 43px;
+
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px rgba(198, 210, 222, 0.3));
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before, //верх и ниж полоски бургера
+  &::after {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 57px;
+    height: 5px;
+
+    background-color: $cyan;
+
+    content: "";
+  }
+
+  &::before { //верх полоска бургера
+    top: 0;
+    box-shadow: 0px 19px 0px 0px $cyan; //сред полоска бургера
+  }
+
+  &::after { //ниж полоска бургера
+    bottom: 0;
+  }
+}
+
+.menu-button--menu-open { //кнопка меню при открытом меню
+
+  &::before { //верх полоска бургера
+    top: 19px;
+    transform: translate(-50%, 0) rotate(-45deg);
+    transition: 0.5s;
+
+    box-shadow: none;
+  }
+
+  &::after { //ниж полоска бургера
+    bottom: 19px;
+    transform: translate(-50%, 0) rotate(45deg);
+    transition: 0.5s;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .menu-button {
+    display: none;
+  }
+}

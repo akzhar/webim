@@ -1,0 +1,13 @@
+@mixin highlightEdges() {
+  background: rgba(random(255), random(255), random(255), 0.3); //временно для сетки
+  outline: 1px solid rgb(random(255), random(255), random(255)); //временно для сетки
+}
+
+$cyan: #2cd3b8;
+$blue: #393e6b;
+$light-blue: #eff4f4;
+$dark-green: #0da088;
+
+$mobile-width: 320px;
+$tablet-width: 750px;
+$desktop-width: 1680px;
