@@ -1,21 +1,3 @@
-// @font-face {
-//   font-weight: 600;
-//   font-family: "Roboto-Bold";
-//   font-style: normal;
-//   font-display: swap;
-//   src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
-//   url("../fonts/Roboto-Bold.woff") format("woff");
-// }
-
-// @font-face {
-//   font-weight: 500;
-//   font-family: "Roboto-Medium";
-//   font-style: normal;
-//   font-display: swap;
-//   src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
-//   url("../fonts/Roboto-Medium.woff") format("woff");
-// }
-
 @font-face {
   font-weight: 400;
   font-family: "Ubuntu-Regular";
@@ -40,26 +22,124 @@ body {
   color: #000000;
 }
 
-.page-wrapper {
-  min-width: 320px;
-  margin: 0 auto;
+.btn {
+  display: block;
+  padding: 29px 10px;
 
-  outline: 1px solid green; //temp
+  letter-spacing: 2px;
+  text-align: center;
+  color: $blue;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  border: 3px solid $blue;
+  border-radius: 50px;
+
+  @include hoverActive;
+}
+
+.btn--cyan {
+  color: $white;
+  background-color: $cyan;
+  border-color: $cyan;
+}
+
+.btn--blue {
+  color: $white;
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.content-wrapper {
+  width: 616px; //82%
+  margin: 0 auto;
+}
+
+.section-header {
+  margin: 0;
+
+  color: $blue;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.text {
+  margin: 0;
+
+  color: $gray;
+  font-size: 26px;
+  line-height: 36px;
+}
+
+.text--small {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.link {
+  display: block;
+
+  color: $cyan;
+  font-size: 26px;
+  line-height: 30px;
+
+  @include hoverActive;
+}
+
+.link--article {
+  width: 426px;
+  margin-bottom: 34px;
+
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.list {
+  @include zeroList;
+  padding-left: 42px;
+}
+
+.list-item {
+    position: relative;
+
+  &:before {
+    position: absolute;
+    display: block;
+    top: 12px;
+    left: -40px;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: $blue;
+    border-radius: 50%;
+  }
 }
 
 @import "header/header.scss";
 @import "menu-button/menu-button.scss";
 @import "menu-list/menu-list.scss";
 @import "logo/logo.scss";
+@import "installation/installation.scss";
+@import "instruction/instruction.scss";
+@import "articles/articles.scss";
+@import "dashboard/dashboard.scss";
+@import "benefit/benefit.scss";
+@import "integration/integration.scss";
+@import "footer/footer.scss";
 
 // @media(min-width: $tablet-width) {
 //   .page-wrapper {
-//     width: 750px;
+//     width: $tablet-width;
 //   }
 // }
 
-@media(min-width: $desktop-width) {
-  .page-wrapper {
-    width: 1540px;
-  }
-}
+// @media(min-width: $desktop-width) {
+//   .page-wrapper {
+//     width: $desktop-width;
+//   }
+// }

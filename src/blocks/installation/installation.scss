@@ -1,0 +1,26 @@
+.installation {
+
+padding: 72px 0 78px 0;
+
+  background-color: $light-blue; //mixin
+
+  // @include highlightEdges;
+}
+
+.installation__header {
+  margin-bottom: 52px;
+}
+
+.installation__text {
+  width: 534px;
+    margin-bottom: 90px;
+}
+
+.installation__inner-wrapper {
+ display: flex;
+ flex-direction: column;
+}
+
+.installation__trybtn {
+  margin-bottom: 30px; //repeat
+}

@@ -1,0 +1,16 @@
+.articles {
+  padding: 92px 0 64px 0;
+
+  background-color: $light-blue;
+
+  // @include highlightEdges;
+}
+
+.articles__header {
+  width: 308px;
+  margin-bottom: 56px;
+}
+
+.articles__text {
+  margin-bottom: 60px;
+}

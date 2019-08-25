@@ -1,0 +1,41 @@
+.integration {
+  padding: 84px 0 108px 0;
+
+  // @include highlightEdges;
+}
+
+.integration__promotext {
+  margin-bottom: 72px;
+
+  line-height: 30px;
+}
+
+.integration__list {
+  font-size: 24px;
+
+  @include zeroList;
+}
+
+.integration__item {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 44px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // @include highlightEdges;
+}
+
+.integration__item--chat {
+  margin-bottom: 60px;
+}
+
+.integration__picture {
+  min-width: 67px;
+  min-height: 67px;
+  margin-left: 4px;
+  margin-right: 45px;
+}
