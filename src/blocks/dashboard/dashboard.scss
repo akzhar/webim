@@ -1,0 +1,20 @@
+.dashboard {
+  padding: 86px 0 24px 0;
+
+  // @include highlightEdges;
+}
+
+.dashboard__header {
+  width: 504px;
+  margin-bottom: 50px;
+}
+
+.dashboard__introtext {
+  margin-bottom: 84px;
+
+  line-height: 28px; //repeat
+}
+
+.dashboard__text {
+  margin-bottom: 58px;
+}

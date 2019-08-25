@@ -23,13 +23,12 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+    content: "";
 
     width: 57px;
     height: 5px;
 
     background-color: $cyan;
-
-    content: "";
   }
 
   &::before { //верх полоска бургера

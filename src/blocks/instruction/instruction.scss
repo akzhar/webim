@@ -1,0 +1,64 @@
+.instruction {
+  padding: 90px 0 78px 0;
+
+  // @include highlightEdges;
+}
+
+.instruction__header {
+  width: 300px;
+  margin-bottom: 46px;
+}
+
+.instruction__text {
+  width: 485px;
+  margin-bottom: 124px;
+}
+
+.instruction__step-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include zeroList;
+
+  // @include highlightEdges;
+}
+
+.instruction__step-item {
+  width: 308px;
+
+  // @include highlightEdges;
+}
+
+.instruction__digit {
+  position: relative;
+
+  margin: 0 0 70px 0;
+
+  font-size: 150px;
+  line-height: 24px;
+  font-weight: 600;
+  color: rgba(57, 62, 107, 0.15);
+
+  // @include highlightEdges;
+}
+
+.instruction__picture {
+  position: absolute;
+  top: -18px;
+  left: 48px;
+}
+
+.instruction__link {
+  width: 140px;
+
+  // @include highlightEdges;
+}
+
+.instruction__link--reg {
+  padding-left: 40px;
+}
+
+.instruction__link--html {
+  padding-left: 50px;
+}
+

@@ -3,8 +3,26 @@
   outline: 1px solid rgb(random(255), random(255), random(255)); //временно для сетки
 }
 
+@mixin hoverActive() {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@mixin zeroList() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+$white: #ffffff;
 $cyan: #2cd3b8;
 $blue: #393e6b;
+$gray: #74757b;
 $light-blue: #eff4f4;
 $dark-green: #0da088;
 

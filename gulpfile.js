@@ -1,30 +1,30 @@
 "use strict";
 
-var gulp = require("gulp"), //задаем переменные
-sass = require("gulp-sass"),
-plumber = require("gulp-plumber"),
-postcss = require("gulp-postcss"),
-jsmin = require("gulp-jsmin"),
-autoprefixer = require("gulp-autoprefixer"),
-cleanCSS = require("gulp-clean-css"),
-imagemin = require("gulp-imagemin"),
-imageminSvgo = require('imagemin-svgo'),
-imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-imageminPngquant = require("imagemin-pngquant"),
-cwebp = require('gulp-cwebp'),
-rimraf = require("rimraf"),
-gulpStylelint = require('gulp-stylelint'),
-server = require("browser-sync").create(),
-devip = require('dev-ip'),
-svgstore = require('gulp-svgstore'),
-posthtml = require('gulp-posthtml'),
-include = require('posthtml-include'),
-htmlmin = require('gulp-htmlmin'),
-run = require('run-sequence'),
-pug = require('gulp-pug'),
-rename = require("gulp-rename");
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var plumber = require("gulp-plumber");
+var postcss = require("gulp-postcss");
+var jsmin = require("gulp-jsmin");
+var autoprefixer = require("gulp-autoprefixer");
+var cleanCSS = require("gulp-clean-css");
+var imagemin = require("gulp-imagemin");
+var imageminSvgo = require('imagemin-svgo');
+var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+var imageminPngquant = require("imagemin-pngquant");
+var cwebp = require('gulp-cwebp');
+var rimraf = require("rimraf");
+var gulpStylelint = require('gulp-stylelint');
+var server = require("browser-sync").create();
+var devip = require('dev-ip');
+var svgstore = require('gulp-svgstore');
+var posthtml = require('gulp-posthtml');
+var include = require('posthtml-include');
+var htmlmin = require('gulp-htmlmin');
+var run = require('run-sequence');
+var pug = require('gulp-pug');
+var rename = require("gulp-rename");
 
-devip(); // [ "192.168.1.76", "192.168.1.80" ] or false if nothing found (ie, offline user)
+devip();
 
 gulp.task('lint', function lintCssTask() { // задача - вызывается как скрипт из package.json
   return gulp
@@ -56,9 +56,9 @@ gulp.task("sprite", function () { // задача - вызывается как 
     imageminSvgo({ // сжатие svg
       plugins: [
       {removeDimensions: true},
-      {removeAttrs: true},
-      {removeElementsByAttr: true},
-      {removeStyleElement: true},
+      {removeAttrs: false},
+      {removeElementsByAttr: false},
+      {removeStyleElement: false},
       {removeViewBox: false}
       ]
     })
@@ -112,9 +112,9 @@ gulp.task("image", function () { // задача - вызывается как �
     imageminSvgo({ // сжатие svg
       plugins: [
       {removeDimensions: true},
-      {removeAttrs: true},
-      {removeElementsByAttr: true},
-      {removeStyleElement: true},
+      {removeAttrs: false},
+      {removeElementsByAttr: false},
+      {removeStyleElement: false},
       {removeViewBox: false}
       ]
     })
@@ -194,3 +194,4 @@ gulp.task ("start", function(done) {
     )
 });
 
+// devip --> "192.168.1.76", "192.168.1.80" or false if nothing found (ie, offline user)
