@@ -1,0 +1,58 @@
+.btn {
+  display: block;
+  padding: 29px 10px;
+
+  letter-spacing: 2px;
+  text-align: center;
+  color: $blue;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  border: 3px solid $blue;
+  border-radius: 50px;
+
+  @include hoverActive;
+}
+
+.btn--cyan {
+  color: #ffffff;
+  background-color: $cyan;
+  border-color: $cyan;
+}
+
+.btn--blue {
+  color: #ffffff;
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.btns-wrapper {
+ display: flex;
+ flex-direction: column;
+
+ & .btn {
+  margin-bottom: 30px;
+ }
+}
+
+
+@media(min-width: $desktop-width) {
+  .btn {
+    padding: 14px 0;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .btns-wrapper {
+    flex-direction: row;
+
+    & .btn {
+      margin-bottom: 0;
+      margin-right: 16px;
+    }
+  }
+}

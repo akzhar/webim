@@ -1,7 +1,5 @@
 .instruction {
   padding: 90px 0 78px 0;
-
-  // @include highlightEdges;
 }
 
 .instruction__header {
@@ -9,9 +7,9 @@
   margin-bottom: 46px;
 }
 
-.instruction__text {
+.instruction__introtext {
   width: 485px;
-  margin-bottom: 124px;
+  margin-bottom: 106px;
 }
 
 .instruction__step-list {
@@ -19,46 +17,94 @@
   flex-wrap: wrap;
 
   @include zeroList;
-
-  // @include highlightEdges;
-}
-
-.instruction__step-item {
-  width: 308px;
-
-  // @include highlightEdges;
-}
-
-.instruction__digit {
-  position: relative;
-
-  margin: 0 0 70px 0;
-
-  font-size: 150px;
-  line-height: 24px;
-  font-weight: 600;
-  color: rgba(57, 62, 107, 0.15);
-
-  // @include highlightEdges;
-}
-
-.instruction__picture {
-  position: absolute;
-  top: -18px;
-  left: 48px;
-}
-
-.instruction__link {
-  width: 140px;
-
-  // @include highlightEdges;
-}
-
-.instruction__link--reg {
   padding-left: 40px;
 }
 
-.instruction__link--html {
-  padding-left: 50px;
+.instruction__step-item {
+  position: relative;
+
+  width: 164px;
+
+  &:nth-child(odd) {
+    margin-right: 155px;
+  }
+
+  &:before {
+    position: absolute;
+
+    top: 20px;
+    left: -46px;
+
+    width: 70px;
+    height: 105px;
+
+    font-size: 150px;
+    line-height: 24px;
+    color: rgba(57, 62, 107, 0.15);
+  }
+
+  &:nth-child(1) {
+    &:before {
+      content: "1";
+    }
+  }
+
+  &:nth-child(2) {
+    &:before {
+      content: "2";
+    }
+  }
 }
 
+.instruction__picture {
+  margin-bottom: 36px;
+}
+
+.instruction__link {
+  width: 150px;
+
+  font-size: 28px;
+}
+
+@media(min-width: $desktop-width) {
+  .instruction {
+    padding: 68px 0 82px 0;
+  }
+
+  .instruction__header {
+    width: auto;
+    margin-bottom: 16px;
+  }
+
+  .instruction__introtext {
+    width: auto;
+    margin-bottom: 112px;
+  }
+
+  .instruction__picture {
+    width: 52px;
+    margin-bottom: 20px;
+  }
+
+  .instruction__link {
+    width: 220px;
+
+    font-size: 18px;
+  }
+
+  .instruction__step-list {
+    padding-left: 0;
+  }
+
+  .instruction__step-item {
+    width: 256px;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &:before {
+      top: 0;
+    }
+  }
+}

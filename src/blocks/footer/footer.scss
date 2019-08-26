@@ -1,18 +1,31 @@
 .footer {
-  padding: 52px 0;
+  padding: 56px 0 54px 0;
 
+  font-size: 26px;
+  line-height: 32px;
+  color: #ffffff;
   background-color: $blue;
 }
 
 .footer__content-wrapper {
-  width: 582px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.footer__text {
-  width: 255px;
-  margin: 0;
+.footer__copyright {
+  padding-left: 16px;
+}
 
-  font-size: 23px;
-  line-height: 34px;
-  color: #ffffff;
+@media(min-width: $desktop-width) {
+  .footer {
+    padding: 50px 0 54px 0;
+
+    font-size: 16px;
+    line-height: 18px;
+    color: $white;
+  }
+
+  .footer__copyright {
+    padding-left: 0;
+  }
 }

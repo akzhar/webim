@@ -1,26 +1,32 @@
 .installation {
-
-padding: 72px 0 78px 0;
-
-  background-color: $light-blue; //mixin
-
-  // @include highlightEdges;
+  padding: 72px 0 48px 0;
 }
 
 .installation__header {
   margin-bottom: 52px;
 }
 
-.installation__text {
+.installation__introtext {
   width: 534px;
-    margin-bottom: 90px;
+  margin-bottom: 90px;
 }
 
-.installation__inner-wrapper {
- display: flex;
- flex-direction: column;
+@media(min-width: $desktop-width) {
+  .installation {
+    padding: 60px 0 68px 0;;
+  }
+
+  .installation__header {
+    margin-bottom: 35px;
+  }
+
+  .installation__introtext {
+    width: 648px;
+    margin-bottom: 54px;
+  }
+
+  .installation__btn {
+    width: 255px;
+  }
 }
 
-.installation__trybtn {
-  margin-bottom: 30px; //repeat
-}

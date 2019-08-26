@@ -1,17 +1,14 @@
 .benefit {
   padding: 82px 0 100px 0;
-
-  background-color: $light-blue;
-
-  // @include highlightEdges;
 }
 
 .benefit__header {
+  width: 530px;
   margin-bottom: 46px;
 }
 
 .benefit__introtext {
-  width: 540px;
+  width: 570px;
   margin-bottom: 70px;
 
   line-height: 30px;
@@ -20,9 +17,6 @@
 .benefit__list {
   @include zeroList;
   margin-bottom: 98px;
-
-  font-size: 24px;
-  color: $blue;
 }
 
 .benefit__item {
@@ -37,7 +31,11 @@
 }
 
 .benefit__text {
+  width: 470px;
   margin: 0;
+
+  font-size: 24px;
+  color: $blue;
 
   & b {
     margin-right: 15px;
@@ -45,16 +43,52 @@
 }
 
 .benefit__picture {
-  min-width: 102px;
-  min-height: 102px;
+  width: 102px;
+  height: 102px;
   margin-right: 45px;
 }
 
-.benefit__inner-wrapper {
-  display: flex;
-  flex-direction: column;
-}
+@media(min-width: $desktop-width) {
+  .benefit {
+    padding: 72px 0 70px 0;;
+  }
 
-.benefit__allbtn {
-  margin-bottom: 30px;
+  .benefit__header {
+    width: auto;
+    margin-bottom: 15px;
+  }
+
+  .benefit__introtext {
+    width: auto;
+    margin-bottom: 55px;
+  }
+
+  .benefit__picture {
+    width: 74px;
+    height: 74px;
+    margin-right: 34px;
+  }
+
+  .benefit__item {
+    margin-bottom: 30px
+  }
+
+  .benefit__text {
+    width: auto;
+    font-size: 18px;
+
+    & b {
+      margin-right: 6px;
+
+      font-size: 26px;
+    }
+  }
+
+  .benefit__list {
+    margin-bottom: 78px;
+  }
+
+ .benefit__btn {
+    width: 265px;
+  }
 }
