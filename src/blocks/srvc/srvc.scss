@@ -1,5 +1,5 @@
 .content-wrapper {
-  width: 616px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -39,7 +39,6 @@
 }
 
 .link--article {
-  width: 456px;
   margin-bottom: 34px;
 
   font-size: 30px;
@@ -74,6 +73,16 @@
 
 .bgcolor--blue {
   background-color: $light-blue;
+}
+
+@media(min-width: $tablet-width) {
+  .content-wrapper {
+    width: 616px;
+  }
+
+  .link--article {
+    width: 456px;
+  }
 }
 
 @media(min-width: $desktop-width) {

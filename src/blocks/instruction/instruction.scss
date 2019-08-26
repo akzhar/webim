@@ -1,5 +1,5 @@
 .instruction {
-  padding: 90px 0 78px 0;
+  padding: 90px 0 18px 0;
 }
 
 .instruction__header {
@@ -8,7 +8,6 @@
 }
 
 .instruction__introtext {
-  width: 485px;
   margin-bottom: 106px;
 }
 
@@ -24,6 +23,7 @@
   position: relative;
 
   width: 164px;
+  margin-bottom: 60px;
 
   &:nth-child(odd) {
     margin-right: 155px;
@@ -66,9 +66,15 @@
   font-size: 28px;
 }
 
+@media(min-width: $tablet-width) {
+  .instruction__introtext {
+    width: 485px;
+  }
+}
+
 @media(min-width: $desktop-width) {
   .instruction {
-    padding: 68px 0 82px 0;
+    padding: 68px 0 22px 0;
   }
 
   .instruction__header {

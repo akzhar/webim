@@ -7,8 +7,13 @@
 }
 
 .installation__introtext {
-  width: 534px;
   margin-bottom: 90px;
+}
+
+@media(min-width: $tablet-width) {
+  .installation__introtext {
+    width: 534px;
+  }
 }
 
 @media(min-width: $desktop-width) {

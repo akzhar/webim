@@ -23,7 +23,26 @@
 }
 
 .header__menu-button {
-  margin: 10px 136px 0 0;
+  margin-top: 10px;
+}
+
+.header .logo {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+@media(min-width: $tablet-width) {
+  .header__menu-button {
+    margin-right: 136px;
+  }
+
+  .header .logo {
+    display: block;
+
+    width: 115px;
+  }
 }
 
 @media(min-width: $desktop-width) {
@@ -42,10 +61,6 @@
   .header__inner-wrapper {
     order: 2;
     width: auto;
-  }
-
-  .header__logo {
-    width: 115px;
   }
 
   .header__menu-list {
