@@ -19,107 +19,11 @@ img {
 
 body {
   font-family: Ubuntu-Regular, Arial, sans-serif;
-  color: #000000;
-}
-
-.btn {
-  display: block;
-  padding: 29px 10px;
-
-  letter-spacing: 2px;
-  text-align: center;
-  color: $blue;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 26px;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: transparent;
-  border: 3px solid $blue;
-  border-radius: 50px;
-
-  @include hoverActive;
-}
-
-.btn--cyan {
-  color: $white;
-  background-color: $cyan;
-  border-color: $cyan;
-}
-
-.btn--blue {
-  color: $white;
-  background-color: $blue;
-  border-color: $blue;
-}
-
-.content-wrapper {
-  width: 616px; //82%
-  margin: 0 auto;
-}
-
-.section-header {
-  margin: 0;
-
-  color: $blue;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 50px;
-  text-transform: uppercase;
-}
-
-.text {
-  margin: 0;
-
   color: $gray;
-  font-size: 26px;
-  line-height: 36px;
 }
 
-.text--small {
-  font-size: 24px;
-  line-height: 30px;
-}
-
-.link {
-  display: block;
-
-  color: $cyan;
-  font-size: 26px;
-  line-height: 30px;
-
-  @include hoverActive;
-}
-
-.link--article {
-  width: 426px;
-  margin-bottom: 34px;
-
-  font-size: 30px;
-  line-height: 36px;
-}
-
-.list {
-  @include zeroList;
-  padding-left: 42px;
-}
-
-.list-item {
-    position: relative;
-
-  &:before {
-    position: absolute;
-    display: block;
-    top: 12px;
-    left: -40px;
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: $blue;
-    border-radius: 50%;
-  }
-}
-
+@import "srvc/srvc.scss";
+@import "btn/btn.scss";
 @import "header/header.scss";
 @import "menu-button/menu-button.scss";
 @import "menu-list/menu-list.scss";
@@ -131,15 +35,5 @@ body {
 @import "benefit/benefit.scss";
 @import "integration/integration.scss";
 @import "footer/footer.scss";
-
-// @media(min-width: $tablet-width) {
-//   .page-wrapper {
-//     width: $tablet-width;
-//   }
-// }
-
-// @media(min-width: $desktop-width) {
-//   .page-wrapper {
-//     width: $desktop-width;
-//   }
-// }
+@import "copyright/copyright.scss";
+@import "contacts/contacts.scss";

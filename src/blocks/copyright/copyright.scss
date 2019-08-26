@@ -1,0 +1,17 @@
+.copyright__text {
+  display: block;
+}
+
+.copyright .logo {
+  display: none;
+}
+
+@media(min-width: $desktop-width) {
+  .copyright__text {
+    width: 255px;
+  }
+
+  .copyright .logo {
+    display: block;
+  }
+}

@@ -1,10 +1,12 @@
 (function() {
 
   var menubutton = document.querySelector('.menu-button');
-  var menu = document.querySelector('.menu-list');
+  var menues = document.querySelectorAll('.menu-list');
 
   function toggleMenu() {
-    menu.classList.toggle('menu-list--open');
+    [].forEach.call(menues, function(menu) {
+      menu.classList.toggle('menu-list--open');
+    });
     menubutton.classList.toggle('menu-button--menu-open');
   }
 
@@ -14,7 +16,7 @@
   });
 
   window.addEventListener('keydown', function(evt) {
-    if (evt.keyCode === 27 && menu.classList.contains('menu-list--open')) {
+    if (evt.keyCode === 27 && menubutton.classList.contains('menu-button--menu-open')) {
       evt.preventDefault();
       toggleMenu();
     }

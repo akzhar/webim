@@ -1,0 +1,93 @@
+.contacts {
+  display: none;
+
+  width: 1200px;
+}
+
+.contacts__telephonelist {
+  @include zeroList;
+  margin-top: 10px;
+}
+
+.contacts___telephoneitem {
+  margin-bottom: 24px;
+}
+
+.contacts__tellogo {
+  margin-right: 15px;
+
+  fill: #68cdbc;
+}
+
+.contacts__tel,
+.contacts__email {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  @include hoverActive;
+}
+
+.contacts__tel {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.contacts___telephoneitem--main {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 18px;
+
+  & .contacts__tel {
+    margin-bottom: 0;
+
+    font-size: 25px;
+    line-height: 28px;
+  }
+}
+
+.contacts__adress {
+  margin: 0;
+}
+
+.contacts__other {
+  margin-top: 6px;
+  margin-right: 44px;
+}
+
+.contacts__timing {
+  margin: 12px 0 16px 0;
+}
+
+.contacts__sociallist {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include zeroList;
+}
+
+.contacts__socialitem {
+  display: flex;
+  align-items: center;
+
+  margin-right: 14px;
+}
+
+.contacts__sociallink {
+  @include hoverActive;
+}
+
+.contacts__sociallogo {
+  fill: $white;
+}
+
+@media(min-width: $desktop-width) {
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+}

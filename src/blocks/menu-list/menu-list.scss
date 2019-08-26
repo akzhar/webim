@@ -37,16 +37,21 @@
 .menu-list {
   display: none;
 
-  width: 100%;
+  margin: 0;
   padding: 0;
-  margin: 0 auto;
 
   list-style: none;
   text-transform: uppercase;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 18px;
+  line-height: 20px;
+}
 
-  // @include highlightEdges;
+.menu-list:first-child .menu-item {
+  margin-right: 36px;
+}
+
+.menu-list:last-child .menu-item {
+  margin-right: 24px;
 }
 
 .menu-list--open {
@@ -67,24 +72,8 @@
   @include hoverActive;
 }
 
-@media (min-width: $tablet-width) {
-  // .menu-list {
-  //   margin: 0;
-  //   width: 616px;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   font-size: 18px;
-  // }
-
-  // .menu-item {
-  //   border: none;
-  //   line-height: 25px;
-  // }
-}
-
 @media (min-width: $desktop-width) {
-  // .menu-list {
-  //   width: 1400px;
-  //   font-size: 20px;
-  // }
+  .menu-list {
+    display: flex;
+  }
 }

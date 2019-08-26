@@ -1,9 +1,5 @@
 .articles {
-  padding: 92px 0 64px 0;
-
-  background-color: $light-blue;
-
-  // @include highlightEdges;
+  padding: 92px 0 94px 0;
 }
 
 .articles__header {
@@ -11,6 +7,26 @@
   margin-bottom: 56px;
 }
 
-.articles__text {
+.articles__item {
+  min-height: 90px;
   margin-bottom: 60px;
+
+  &:last-child {
+    margin: 26px 0 0 0;
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .articles {
+    padding: 82px 0 56px 0;
+  }
+
+  .articles__header {
+    width: auto;
+    margin-bottom: 70px;
+  }
+
+  .articles__item {
+    margin-bottom: 20px;
+  }
 }
