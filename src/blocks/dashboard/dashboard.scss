@@ -3,12 +3,10 @@
 }
 
 .dashboard__header {
-  width: 530px;
   margin-bottom: 50px;
 }
 
 .dashboard__introtext {
-  width: 530px;
   margin-bottom: 84px;
 
   line-height: 28px;
@@ -21,6 +19,16 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media(min-width: $tablet-width) {
+  .dashboard__header {
+    width: 530px;
+  }
+
+  .dashboard__introtext {
+    width: 530px;
   }
 }
 

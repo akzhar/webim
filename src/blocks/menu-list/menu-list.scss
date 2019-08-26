@@ -37,7 +37,7 @@
 .menu-list {
   display: none;
 
-  margin: 0;
+  margin: 48px 0 0 0;
   padding: 0;
 
   list-style: none;
@@ -70,6 +70,12 @@
   color: $blue;
 
   @include hoverActive;
+}
+
+@media (min-width: $desktop-width) {
+  .menu-list {
+    margin: 0;
+  }
 }
 
 @media (min-width: $desktop-width) {

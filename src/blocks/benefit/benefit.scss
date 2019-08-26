@@ -3,12 +3,10 @@
 }
 
 .benefit__header {
-  width: 530px;
   margin-bottom: 46px;
 }
 
 .benefit__introtext {
-  width: 570px;
   margin-bottom: 70px;
 
   line-height: 30px;
@@ -46,6 +44,16 @@
   width: 102px;
   height: 102px;
   margin-right: 45px;
+}
+
+@media(min-width: $tablet-width) {
+.benefit__header {
+  width: 530px;
+}
+
+.benefit__introtext {
+  width: 570px;
+  }
 }
 
 @media(min-width: $desktop-width) {
