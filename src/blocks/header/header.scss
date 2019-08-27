@@ -26,22 +26,9 @@
   margin-top: 10px;
 }
 
-.header .logo {
-  display: flex;
-  justify-content: center;
-
-  width: 100%;
-}
-
 @media(min-width: $tablet-width) {
   .header__menu-button {
     margin-right: 136px;
-  }
-
-  .header .logo {
-    display: block;
-
-    width: 115px;
   }
 }
 
