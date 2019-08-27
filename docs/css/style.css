@@ -182,17 +182,9 @@ body {
 .header__menu-button {
   margin-top: 10px; }
 
-.header .logo {
-  display: flex;
-  justify-content: center;
-  width: 100%; }
-
 @media (min-width: 750px) {
   .header__menu-button {
-    margin-right: 136px; }
-  .header .logo {
-    display: block;
-    width: 115px; } }
+    margin-right: 136px; } }
 
 @media (min-width: 1680px) {
   .header {
@@ -314,11 +306,21 @@ body {
     display: flex; } }
 
 .logo {
-  display: block; }
+  display: flex;
+  justify-content: center;
+  width: 100%; }
   .logo:hover {
     opacity: 0.6; }
   .logo:active {
     opacity: 0.3; }
+
+@media (min-width: 750px) {
+  .logo {
+    display: block; } }
+
+@media (min-width: 1680px) {
+  .logo svg {
+    width: 115px; } }
 
 .installation {
   padding: 72px 0 48px 0; }
